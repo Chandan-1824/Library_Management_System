@@ -57,6 +57,23 @@ The system consists of **6 main tables**:
 
 ---
 
+## ⚡ Sample Queries & Output
+
+### 1️⃣ Find Books Not Yet Returned
+```sql
+SELECT ist.issued_book_name
+FROM issued_status ist
+LEFT JOIN return_status r ON ist.issued_id = r.issued_id
+WHERE r.issued_id IS NULL;
+
+### 2️⃣ Total Rental Income by Category
+```sql
+SELECT b.category, COUNT(*) AS total_books, SUM(b.rental_price) AS total_income
+FROM books b
+JOIN issued_status ist 
+ON b.isbn = ist.issued_book_isbn
+GROUP BY b.category;
+
 ## 🧠 Advanced SQL Concepts Used
 
 * Foreign key constraints for **data integrity**
