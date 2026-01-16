@@ -27,6 +27,7 @@ The system consists of **6 main tables**:
 - Primary keys ensure each record is unique  
 - Foreign keys maintain consistency (e.g., issued books link to members and employees)  
 
+**ERD Diagram For tables and relationships**
 ![ERD Diagram showing tables and relationships](https://github.com/Chandan-1824/Library_Management_System/blob/main/ERD_diagram.jpg?raw=true)
 
 ---
