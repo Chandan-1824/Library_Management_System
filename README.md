@@ -1,69 +1,59 @@
 # 📖 Library Management System – SQL Project
+---
 
-## 📌 Project Overview
+## 📌 About the Project
+This is a **Library Management System** built entirely using **SQL**. It’s designed to handle all essential library operations, including **book management, member tracking, employee and branch management, and book issue/return tracking**.  
 
-This project implements a **Library Management System** using SQL, handling **Books, Members, Employees, Branches, Issued and Return status**. The system tracks book issues, returns, rental income, and member activity while allowing employees to manage library operations efficiently.
+The project also allows analysis of **rental income, book popularity, and member activity**, making it a practical example of how SQL can be used in real-world business scenarios.
 
-The project demonstrates skills in **table creation, data integrity via foreign keys, joins, aggregations, CTAS, and query-based problem solving**.
+> 💡 **Skills Demonstrated:** Relational database design, foreign key relationships, complex queries, aggregation, summary tables, and analytical SQL.
 
 ---
 
-## 🗂️ Database & Table Structure
+## 🗂️ Database Structure
 
-### Tables
+The system consists of **6 main tables**:
 
-1. `branch` – Library branch details
-2. `employees` – Employee records linked to branches
-3. `books` – Books available in the library
-4. `members` – Library members
-5. `issued_status` – Records of books issued to members
-6. `return_status` – Records of books returned
+| Table | Purpose |
+|-------|--------|
+| `branch`          | Stores branch information and managers |
+| `employees`       | Employee records linked to branches |
+| `books`           | Library book inventory with rental info |
+| `members`         | Registered library members |
+| `issued_status`   | Tracks books issued to members |
+| `return_status`   | Tracks books returned |
 
-### Key Columns
-
-* `branch.branch_id`, `employees.emp_id`, `books.isbn`, `members.member_id`, `issued_status.issued_id`, `return_status.return_id` as primary keys
-* Foreign keys maintain relationships, e.g., `issued_status.issued_member_id → members.member_id`
-
----
-
-## 🧹 Data Handling & Checks
-
-* Checked all tables after creation using `SELECT * ... LIMIT 10`.
-* Ensured **foreign key relationships** maintain integrity.
-* Inserted new book records and updated member addresses.
+**Relationships:**  
+- Primary keys ensure each record is unique  
+- Foreign keys maintain consistency (e.g., issued books link to members and employees)  
 
 ---
 
-## 📊 Key SQL Analysis & Operations
+## 🔹 Key Features
 
-### 1️⃣ Basic CRUD Operations
+### 📚 Book Management
+- Add new books  
+- Update book details  
+- Delete obsolete records  
 
-* **Add new book**
-* **Update member info**
-* **Delete issued record**
+### 👥 Member Management
+- Update member information  
+- Track member activity and books issued  
 
-### 2️⃣ Issue & Return Tracking
+### 📖 Issue & Return Tracking
+- Find books issued by a specific employee  
+- Identify members with multiple borrowed books  
+- Check for unreturned books  
+- Generate **summary tables** using `CTAS`  
 
-* Retrieve books issued by a specific employee
-* List members with multiple issued books
-* Find books not yet returned
-* Generate summary tables for books issued (CTAS)
+### 💰 Revenue & Inventory Insights
+- Calculate total rental income by category  
+- Identify popular books and high-rental books  
+- Analyze issuance per member and per category  
 
-### 3️⃣ Revenue & Stock Analysis
-
-* Total rental income by category
-* Books with rental price above a certain threshold
-* Books issued per category and per member
-
-### 4️⃣ Employee & Branch Management
-
-* List employees with their branch manager and branch details
-* Retrieve employee info including salary, position, and branch
-
-### 5️⃣ Member Insights
-
-* List members registered in the last 700 days
-* Identify active members based on books issued count
+### 🏢 Employee & Branch Insights
+- Display employees with their branch manager and branch details  
+- View employee salary, position, and branch affiliation  
 
 ---
 
@@ -84,6 +74,7 @@ The project demonstrates skills in **table creation, data integrity via foreign 
 * **Database:** PostgreSQL
 * **Language:** SQL
 * **Environment:** pgAdmin / PostgreSQL CLI
+* **Tool For Data Cleaning:** Excel
 
 ---
 
@@ -110,7 +101,7 @@ The project demonstrates skills in **table creation, data integrity via foreign 
 **Chandan Mistry**
 CSE Student | Aspiring Data Analyst
 
-📧 Contact: *(Add your email / LinkedIn here)*
+📧 Contact: *chandanmistry844@gmail.com*
 
 ---
 
