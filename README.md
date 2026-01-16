@@ -57,7 +57,7 @@ The system consists of **6 main tables**:
 
 ---
 
-## ⚡ Sample Queries & Output
+## ⚡ Sample Queries
 
 ### 1️⃣ Find Books Not Yet Returned
 ```sql
